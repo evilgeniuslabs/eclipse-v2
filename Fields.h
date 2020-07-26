@@ -89,7 +89,12 @@ String getTwinkleDensity() {
   return String(twinkleDensity);
 }
 
+String getName() {
+  return nameString;
+}
+
 FieldList fields = {
+  { "name", "Name", LabelFieldType, 0, 0, getName },
   { "power", "Power", BooleanFieldType, 0, 1, getPower },
   { "brightness", "Brightness", NumberFieldType, 1, 255, getBrightness },
   { "pattern", "Pattern", SelectFieldType, 0, patternCount, getPattern, getPatterns },
